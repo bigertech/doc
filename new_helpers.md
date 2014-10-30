@@ -28,3 +28,17 @@ example: 获取 id = 49 的文章的，下两篇文章
 		{{pre_post postId="49" limit=2}}
 ```
 
+
+## excerpt
+截取正文内容  
+
+可选参数   
+
+* `words`  单词数   
+* `characters` 字符数，  如果是中文，请使用这个
+
+** example  **
+
+```
+{{excerpt words="40"}}
+```  
