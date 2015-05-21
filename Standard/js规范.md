@@ -4,7 +4,7 @@
 
 ## 编码风格 JSHint
 1. 在编辑器中，开启 JSHint
-2. 在项目根目录建立 [.jshintrc 文件](config/.jshintrc)
+2. 在项目根目录建立 [.jshintrc 文件](../config/.jshintrc)
 
 ### 相关阅读
 [jshint](http://jshint.com/)
@@ -12,9 +12,6 @@
 
 ##Indentation,分号,单行长度
 * 一律使用2个空格
-<<<<<<< HEAD
-* continuation-indentation 同样适用 2 个空格，跟上一行对齐
-=======
 * continuation-indentation 同样适用2个空格，跟上一行对齐
 >>>>>>> origin/master
 * Statement 之后一律以分号结束， 不可以省略
