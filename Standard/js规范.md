@@ -1,12 +1,21 @@
 > 无论人数多少，代码都应该同出一门。
 
 #JavaScript
+
+## 编码风格 JSHint
+1. 在编辑器中，开启 JSHint
+2. 在项目根目录建立 [.jshintrc 文件](config/.jshintrc)
+
+### 相关阅读
+[jshint](http://jshint.com/)
+
+
 ##Indentation,分号,单行长度
-* 一律使用4个空格
-* continuation-indentation 同样适用4个空格，跟上一行对齐
+* 一律使用2个空格
+* continuation-indentation 同样适用 2 个空格，跟上一行对齐
 * Statement 之后一律以分号结束， 不可以省略
 * 单行长度，理论上不要超过80列，不过如果编辑器开启 soft wrap 的话可以不考虑单行长度
-* 接上一条，如果需要换行，存在操作符的情况，一定在操作符后换行，然后换的行缩进4个空格
+* 接上一条，如果需要换行，存在操作符的情况，一定在操作符后换行，然后换的行缩进2个空格
 这里要注意，如果是多次换行的话就没有必要继续缩进了，比如说右边第二段这种就是最佳格式。
 
 **Example**
@@ -14,7 +23,7 @@
 if (typeof qqfind === "undefined" ||
   typeof qqfind.cdnrejected === "undefined" ||
   qqfind.cdnrejected !== true) {
-  url =   "http://pub.idqqimg.com/qqfind/js/location4.js";
+  url = "http://pub.idqqimg.com/qqfind/js/location4.js";
 } else {
   url = "http://find.qq.com/js/location4.js";
 }
@@ -26,13 +35,14 @@ if (typeof qqfind === "undefined" ||
 * 逻辑块之间加空行增加可读性
 
 ##变量命名
-* 标准变量采用驼峰标识
-* 使用的ID的地方一定全大写
+* 标准变量采用驼峰标识 如: `ceseCamel`
+* 使用的ID的地方一定全大写，如：`userID`
 * 使用的URL的地方一定全大写, 比如说 reportURL
 * 涉及Android的，一律大写第一个字母
 * 涉及iOS的，一律小写第一个，大写后两个字母
-* 常量采用大写字母，下划线连接的方式
+* 常量采用大写字母，下划线连接的方式，如：`NAMES_LIKE_THIS`
 * 构造函数，大写第一个字母
+* 类名驼峰，并且首字母要大写 CamelName
 
 ```
 var thisIsMyName;
@@ -61,7 +71,7 @@ function Person(name) {
 * Do not use null to test whether an argument was supplied
 * Do not test an uninitialized variable for the value null
 
-##ndefined使用场景
+##undefined使用场景
 * 永远不要直接使用undefined进行变量判断
 * 使用字符串 "undefined" 对变量进行判断
 
@@ -84,7 +94,7 @@ team.count = 25;
 
 // Good  semi colon 采用 符号后面接空格 的形式
 var team = {
-  title: "AlloyTeam",
+  title: 'AlloyTeam',
   count: 25
 };
 ```
@@ -226,3 +236,16 @@ var value = (function() {
 
 })();
 ```
+
+## 其他
+* 尽量减少全局变量的使用.
+* 语句总是以分号结尾.
+* 不要在块内声明函数.
+* 标准特性优于非标准特性(如果类库有提供, 优先使用类库中的函数).
+* 不要封装基本类型.
+* 只在解析序列化串时使用 eval() .
+* 禁止使用 with .
+* 减少使用 continue 和 break .
+* 仅在函数内使用 this .
+* 使用 Array/Object 直接量, 避免使用 Array/Object 构造器.
+* 禁止修改内置对象的原型.
