@@ -12,7 +12,11 @@
 
 ##Indentation,分号,单行长度
 * 一律使用2个空格
+<<<<<<< HEAD
 * continuation-indentation 同样适用 2 个空格，跟上一行对齐
+=======
+* continuation-indentation 同样适用2个空格，跟上一行对齐
+>>>>>>> origin/master
 * Statement 之后一律以分号结束， 不可以省略
 * 单行长度，理论上不要超过80列，不过如果编辑器开启 soft wrap 的话可以不考虑单行长度
 * 接上一条，如果需要换行，存在操作符的情况，一定在操作符后换行，然后换的行缩进2个空格
