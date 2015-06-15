@@ -9,6 +9,8 @@
 * [前端开发规范](Standard/前端开发规范.md)
 * [文件规范](Standard/文件规范.md)
 * [注释规范](Standard/注释规范.md)
+* [开发须知](开发须知.md)
+
 
 ## 培训汇总
 * [readme](readme.md)
