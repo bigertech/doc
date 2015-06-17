@@ -87,16 +87,6 @@ var y = 'foo',
     z = '<div id="test"></div>';
 ```
 
-
-##null的使用场景
-* To initialize a variable that may later be assigned an object value
-* To compare against an initialized variable that may or may not have an object value
-* To pass into a function where an object is expected
-* To return from a function where an object is expected
-##不适合null的使用场景
-* Do not use null to test whether an argument was supplied
-* Do not test an uninitialized variable for the value null
-
 ##undefined使用场景
 * 永远不要直接使用undefined进行变量判断
 * 使用字符串 "undefined" 对变量进行判断
