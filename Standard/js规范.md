@@ -31,9 +31,23 @@ if (typeof qqfind === "undefined" ||
 ```
 
 ##空行
-* 方法之间加
+* 变量声明后（当变量声明在代码块的最后一行时，则无需空行）
+* 代码块后，逻辑块之间加空行增加可读性（在函数调用、数组、对象中则无需空行）
 * 单行或多行注释前加
-* 逻辑块之间加空行增加可读性
+* 文件最后保留一个空行
+
+##换行
+换行的地方，行末必须有','或者运算符；
+
+以下几种情况不需要换行：
+
+* 下列关键字后：else, catch, finally
+* 代码块'{'前
+以下几种情况需要换行：
+
+* 代码块'{'后和'}'前
+* 变量赋值后
+
 
 ##变量命名
 * 标准变量采用驼峰标识 如: `ceseCamel`
@@ -44,6 +58,7 @@ if (typeof qqfind === "undefined" ||
 * 常量采用大写字母，下划线连接的方式，如：`NAMES_LIKE_THIS`
 * 构造函数，大写第一个字母
 * 类名驼峰，并且首字母要大写 CamelName
+* jquery对象必须以'$'开头命名
 
 ```
 var thisIsMyName;
@@ -60,8 +75,18 @@ function Person(name) {
   this.name = name
 }
 ```
-##字符常量
-一般情况下统一使用 '' 单引号
+##引号
+最外层统一使用单引号。
+
+```
+// not good
+var x = "test";
+
+// good
+var y = 'foo',
+    z = '<div id="test"></div>';
+```
+
 
 ##null的使用场景
 * To initialize a variable that may later be assigned an object value
@@ -85,6 +110,7 @@ console.log(person === undefined);    //true
 // Good
 console.log(typeof person);    // "undefined"
 ```
+
 ##对象声明
 
 ```
@@ -173,7 +199,8 @@ for (prop in object) {
 ```
 
 ##变量声明
-所有函数内变量声明放在函数内头部，只使用一个 var(多了JSLint报错)， 一个变量一行， 在行末跟注释， 注释啊，注释啊，亲
+所有函数内变量声明放在函数内头部，只使用一个 var(多了JSLint报错)，
+ 一个变量一行， 在行末跟注释， 注释啊，注释啊，亲
 
 ```
 function doSomethingWithItems(items) {
@@ -237,6 +264,24 @@ var value = (function() {
 
 })();
 ```
+
+##数组、对象
+* 对象属性名不需要加引号；
+* 对象以缩进的形式书写，不要写在一行；
+* 数组、对象最后不要有逗号。
+
+##null
+适用场景：
+
+* 初始化一个将来可能被赋值为对象的变量
+* 与已经初始化的变量做比较
+* 作为一个参数为对象的函数的调用传参
+* 作为一个返回对象的函数的返回值
+不适用场景：
+
+* **不要用null来判断函数调用时有无传参**
+* 不要与未初始化的变量做比较
+
 
 ## 其他
 * 尽量减少全局变量的使用.
